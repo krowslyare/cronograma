@@ -1,2 +1,0 @@
-# cronograma
-Gantt del proyecto
