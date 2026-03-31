@@ -55,9 +55,10 @@
         .grid-container { position: relative; height: 100%; } /* Width set by JS */
         .grid-bg { position: absolute; inset: 0; display: grid; pointer-events: none; z-index: 0; }
         .grid-line { border-right: 1px solid #f1f5f9; height: 100%; }
+        .grid-line.weekend { background-color: #f8fafc; }
         .grid-line.today { background-color: rgba(59, 130, 246, 0.1); border-right: 2px solid #3b82f6; z-index: 5; }
         
-        /* TIMELINE HEADER */
+        .bars-layer { position: absolute; inset: 0; z-index: 10; pointer-events: none; }
         
         /* ROWS STYLING */
         .row-item { height: 40px; display: flex; align-items: center; border-bottom: 1px solid #f1f5f9; padding: 0 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-sizing: border-box; }
@@ -169,8 +170,8 @@
                 type: 'package',
                 children: [
                   { id: 'T1', name: 'Revisión documental y entrevistas', start: '2026-01-06', end: '2026-01-10' },
-                  { id: 'T2', name: 'Diagrama AS-IS (Mermaid)', start: '2026-01-10', end: '2026-01-13' },
-                  { id: 'T3', name: 'Diagramas TO-BE (Mermaid)', start: '2026-01-13', end: '2026-01-17' },
+                  { id: 'T2', name: 'Diagrama AS-IS del proceso', start: '2026-01-10', end: '2026-01-13' },
+                  { id: 'T3', name: 'Diagramas TO-BE (flujo y arquitectura)', start: '2026-01-13', end: '2026-01-17' },
                   { id: 'T4', name: 'Validación con expertos', start: '2026-01-17', end: '2026-01-20' },
                 ]
               },
@@ -207,8 +208,8 @@
                   { id: 'T13', name: 'Arquitectura del pipeline', start: '2026-02-17', end: '2026-02-20' },
                   { id: 'T14', name: 'Diseño de modelos dbt', start: '2026-02-20', end: '2026-02-24' },
                   { id: 'T15', name: 'Especificación de tests', start: '2026-02-24', end: '2026-02-26' },
-                  { id: 'T16', name: 'Diagramas técnicos (Mermaid)', start: '2026-02-26', end: '2026-03-01' },
-                  { id: 'T17', name: 'Documentación del diseño', start: '2026-03-01', end: '2026-03-05' },
+                  { id: 'T16', name: 'Diagramas técnicos del pipeline', start: '2026-02-26', end: '2026-03-01' },
+                  { id: 'T17', name: 'Documentación del diseño', start: '2026-03-01', end: '2026-03-31' },
                 ]
               },
               {
@@ -395,8 +396,8 @@
             });
 
             // Safety check
-            if(!globalMin) globalMin = new Date(Date.UTC(2025,0,1));
-            if(!globalMax) globalMax = new Date(Date.UTC(2025,11,31));
+            if(!globalMin) globalMin = new Date(Date.UTC(2026,0,1));
+            if(!globalMax) globalMax = new Date(Date.UTC(2026,11,31));
 
             // Add Buffer
             const startDate = new Date(globalMin);
