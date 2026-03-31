@@ -55,9 +55,9 @@
         .grid-container { position: relative; height: 100%; } /* Width set by JS */
         .grid-bg { position: absolute; inset: 0; display: grid; pointer-events: none; z-index: 0; }
         .grid-line { border-right: 1px solid #f1f5f9; height: 100%; }
-        .grid-line.weekend { background-color: #f8fafc; }
+        .grid-line.today { background-color: rgba(59, 130, 246, 0.1); border-right: 2px solid #3b82f6; z-index: 5; }
         
-        .bars-layer { position: absolute; inset: 0; z-index: 10; pointer-events: none; }
+        /* TIMELINE HEADER */
         
         /* ROWS STYLING */
         .row-item { height: 40px; display: flex; align-items: center; border-bottom: 1px solid #f1f5f9; padding: 0 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-sizing: border-box; }
@@ -455,6 +455,14 @@
                 line.className = 'grid-line';
                 const dayNum = d.getUTCDay();
                 if(dayNum === 0 || dayNum === 6) line.classList.add('weekend');
+                
+                // Today Highlight
+                const now = new Date();
+                const isToday = d.getUTCFullYear() === now.getUTCFullYear() && 
+                                d.getUTCMonth() === now.getUTCMonth() && 
+                                d.getUTCDate() === now.getUTCDate();
+                if(isToday) line.classList.add('today');
+
                 gridBgEl.appendChild(line);
 
                 // Top Header (Months) logic
@@ -552,9 +560,15 @@
                  scrollArea.scrollTop = sidebarList.scrollTop;
             };
 
-            // Force Scroll Reset
+            // Force Scroll Reset & Focus Today
             requestAnimationFrame(() => {
-                scrollArea.scrollLeft = 0;
+                const todayEl = gridBgEl.querySelector('.today');
+                if(todayEl) {
+                    const scrollTarget = todayEl.offsetLeft - (scrollArea.clientWidth / 2);
+                    scrollArea.scrollLeft = Math.max(0, scrollTarget);
+                } else {
+                    scrollArea.scrollLeft = 0;
+                }
             });
         });
 
