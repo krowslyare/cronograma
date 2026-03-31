@@ -209,28 +209,28 @@
                   { id: 'T14', name: 'Diseño de modelos dbt', start: '2026-02-20', end: '2026-02-24' },
                   { id: 'T15', name: 'Especificación de tests', start: '2026-02-24', end: '2026-02-26' },
                   { id: 'T16', name: 'Diagramas técnicos del pipeline', start: '2026-02-26', end: '2026-03-01' },
-                  { id: 'T17', name: 'Documentación del diseño', start: '2026-03-01', end: '2026-03-31' },
+                  { id: 'T17', name: 'Documentación del diseño', start: '2026-03-01', end: '2026-03-05' },
                 ]
               },
               {
                 name: 'Implementación del pipeline (R2.2)',
                 type: 'package',
                 children: [
-                  { id: 'T18', name: 'Configuración de entorno (GCP, dbt, Airflow)', start: '2026-04-01', end: '2026-04-05' },
-                  { id: 'T19', name: 'Implementación de macro normalizar_labor()', start: '2026-04-05', end: '2026-04-07' },
-                  { id: 'T20', name: 'Desarrollo de modelos dbt', start: '2026-04-07', end: '2026-04-12' },
-                  { id: 'T21', name: 'Creación de DAG de Airflow', start: '2026-04-12', end: '2026-04-15' },
-                  { id: 'T22', name: 'Ejecución y validación del pipeline', start: '2026-04-15', end: '2026-04-18' },
-                  { id: 'T23', name: 'Verificación de métricas (28→80-100 obs)', start: '2026-04-18', end: '2026-04-20' },
+                  { id: 'T18', name: 'Configuración de entorno (GCP, dbt, Airflow)', start: '2026-03-05', end: '2026-03-09' },
+                  { id: 'T19', name: 'Implementación de macro normalizar_labor()', start: '2026-03-09', end: '2026-03-11' },
+                  { id: 'T20', name: 'Desarrollo de modelos dbt', start: '2026-03-11', end: '2026-03-16' },
+                  { id: 'T21', name: 'Creación de DAG de Airflow', start: '2026-03-16', end: '2026-03-19' },
+                  { id: 'T22', name: 'Ejecución y validación del pipeline', start: '2026-03-19', end: '2026-03-22' },
+                  { id: 'T23', name: 'Verificación de métricas (28→80-100 obs)', start: '2026-03-22', end: '2026-03-24' },
                 ]
               },
               {
                 name: 'Documentación del pipeline (R2.3)',
                 type: 'package',
                 children: [
-                  { id: 'T24', name: 'Generación de dbt docs', start: '2026-04-20', end: '2026-04-22' },
-                  { id: 'T25', name: 'Captura de screenshots', start: '2026-04-22', end: '2026-04-23' },
-                  { id: 'T26', name: 'Documentación de resultados', start: '2026-04-23', end: '2026-04-25' },
+                  { id: 'T24', name: 'Generación de dbt docs', start: '2026-03-24', end: '2026-03-26' },
+                  { id: 'T25', name: 'Captura de screenshots', start: '2026-03-26', end: '2026-03-27' },
+                  { id: 'T26', name: 'Documentación de resultados', start: '2026-03-27', end: '2026-03-29' },
                 ]
               },
             ]
@@ -243,29 +243,29 @@
                 name: 'Preparación y baseline',
                 type: 'package',
                 children: [
-                  { id: 'T27', name: 'Preparación del dataset para ML', start: '2026-04-25', end: '2026-04-27' },
-                  { id: 'T28', name: 'Implementación de baseline (Regresión Lineal)', start: '2026-04-27', end: '2026-04-29' },
-                  { id: 'T29', name: 'Evaluación de baseline', start: '2026-04-29', end: '2026-04-30' },
+                  { id: 'T27', name: 'Preparación del dataset para ML', start: '2026-03-29', end: '2026-03-31' },
+                  { id: 'T28', name: 'Implementación de baseline (Regresión Lineal)', start: '2026-03-31', end: '2026-04-02' },
+                  { id: 'T29', name: 'Evaluación de baseline', start: '2026-04-02', end: '2026-04-03' },
                 ]
               },
               {
                 name: 'Entrenamiento con AutoML',
                 type: 'package',
                 children: [
-                  { id: 'T30', name: 'Configuración de Vertex AI AutoML', start: '2026-04-30', end: '2026-05-02' },
-                  { id: 'T31', name: 'Entrenamiento de modelos (2-4 horas)', start: '2026-05-02', end: '2026-05-05' },
-                  { id: 'T32', name: 'Evaluación de modelos candidatos', start: '2026-05-05', end: '2026-05-07' },
-                  { id: 'T33', name: 'Selección del modelo campeón', start: '2026-05-07', end: '2026-05-08' },
+                  { id: 'T30', name: 'Configuración de Vertex AI AutoML', start: '2026-04-03', end: '2026-04-05' },
+                  { id: 'T31', name: 'Entrenamiento de modelos (2-4 horas)', start: '2026-04-05', end: '2026-04-08' },
+                  { id: 'T32', name: 'Evaluación de modelos candidatos', start: '2026-04-08', end: '2026-04-10' },
+                  { id: 'T33', name: 'Selección del modelo campeón', start: '2026-04-10', end: '2026-04-11' },
                 ]
               },
               {
                 name: 'Validación y documentación',
                 type: 'package',
                 children: [
-                  { id: 'T34', name: 'Análisis de feature importance', start: '2026-05-08', end: '2026-05-10' },
-                  { id: 'T35', name: 'Informe de benchmarking', start: '2026-05-10', end: '2026-05-12' },
-                  { id: 'T36', name: 'Informe del modelo campeón', start: '2026-05-12', end: '2026-05-14' },
-                  { id: 'T37', name: 'Despliegue del endpoint', start: '2026-05-14', end: '2026-05-15' },
+                  { id: 'T34', name: 'Análisis de feature importance', start: '2026-04-11', end: '2026-04-13' },
+                  { id: 'T35', name: 'Informe de benchmarking', start: '2026-04-13', end: '2026-04-15' },
+                  { id: 'T36', name: 'Informe del modelo campeón', start: '2026-04-15', end: '2026-04-17' },
+                  { id: 'T37', name: 'Despliegue del endpoint', start: '2026-04-17', end: '2026-04-18' },
                 ]
               },
             ]
@@ -278,31 +278,31 @@
                 name: 'Diseño y desarrollo',
                 type: 'package',
                 children: [
-                  { id: 'T38', name: 'Definición de KPIs y visualizaciones', start: '2026-05-15', end: '2026-05-18' },
-                  { id: 'T39', name: 'Diseño del prototipo', start: '2026-05-18', end: '2026-05-20' },
-                  { id: 'T40', name: 'Conexión a BigQuery', start: '2026-05-20', end: '2026-05-22' },
-                  { id: 'T41', name: 'Construcción de visualizaciones', start: '2026-05-22', end: '2026-05-27' },
-                  { id: 'T42', name: 'Validación de métricas', start: '2026-05-27', end: '2026-05-29' },
+                  { id: 'T38', name: 'Definición de KPIs y visualizaciones', start: '2026-04-18', end: '2026-04-21' },
+                  { id: 'T39', name: 'Diseño del prototipo', start: '2026-04-21', end: '2026-04-23' },
+                  { id: 'T40', name: 'Conexión a BigQuery', start: '2026-04-23', end: '2026-04-25' },
+                  { id: 'T41', name: 'Construcción de visualizaciones', start: '2026-04-25', end: '2026-04-30' },
+                  { id: 'T42', name: 'Validación de métricas', start: '2026-04-30', end: '2026-05-02' },
                 ]
               },
               {
                 name: 'Simulación "What-If"',
                 type: 'package',
                 children: [
-                  { id: 'T43', name: 'Definición de variables ajustables', start: '2026-05-29', end: '2026-05-31' },
-                  { id: 'T44', name: 'Construcción del módulo de simulación', start: '2026-05-31', end: '2026-06-04' },
-                  { id: 'T45', name: 'Integración al dashboard', start: '2026-06-04', end: '2026-06-06' },
-                  { id: 'T46', name: 'Pruebas de escenarios', start: '2026-06-06', end: '2026-06-08' },
+                  { id: 'T43', name: 'Definición de variables ajustables', start: '2026-05-02', end: '2026-05-04' },
+                  { id: 'T44', name: 'Construcción del módulo de simulación', start: '2026-05-04', end: '2026-05-08' },
+                  { id: 'T45', name: 'Integración al dashboard', start: '2026-05-08', end: '2026-05-10' },
+                  { id: 'T46', name: 'Pruebas de escenarios', start: '2026-05-10', end: '2026-05-12' },
                 ]
               },
               {
                 name: 'Validación con expertos',
                 type: 'package',
                 children: [
-                  { id: 'T47', name: 'Sesiones con expertos (3-5 personas)', start: '2026-06-08', end: '2026-06-12' },
-                  { id: 'T48', name: 'Recolección de feedback', start: '2026-06-12', end: '2026-06-14' },
-                  { id: 'T49', name: 'Correcciones y ajustes', start: '2026-06-14', end: '2026-06-18' },
-                  { id: 'T50', name: 'Informe de validación', start: '2026-06-18', end: '2026-06-20' },
+                  { id: 'T47', name: 'Sesiones con expertos (3-5 personas)', start: '2026-05-12', end: '2026-05-16' },
+                  { id: 'T48', name: 'Recolección de feedback', start: '2026-05-16', end: '2026-05-18' },
+                  { id: 'T49', name: 'Correcciones y ajustes', start: '2026-05-18', end: '2026-05-22' },
+                  { id: 'T50', name: 'Informe de validación', start: '2026-05-22', end: '2026-05-24' },
                 ]
               },
             ]
@@ -315,22 +315,22 @@
                 name: 'Redacción de capítulos',
                 type: 'package',
                 children: [
-                  { id: 'T51', name: 'Capítulo 4 (Resultados) - finalización', start: '2026-06-20', end: '2026-06-25' },
-                  { id: 'T52', name: 'Capítulo 5 (Conclusiones)', start: '2026-06-25', end: '2026-06-28' },
-                  { id: 'T53', name: 'Anexos y apéndices', start: '2026-06-28', end: '2026-07-01' },
-                  { id: 'T54', name: 'Revisión integral del documento', start: '2026-07-01', end: '2026-07-04' },
+                  { id: 'T51', name: 'Capítulo 4 (Resultados) - finalización', start: '2026-05-24', end: '2026-05-29' },
+                  { id: 'T52', name: 'Capítulo 5 (Conclusiones)', start: '2026-05-29', end: '2026-06-01' },
+                  { id: 'T53', name: 'Anexos y apéndices', start: '2026-06-01', end: '2026-06-04' },
+                  { id: 'T54', name: 'Revisión integral del documento', start: '2026-06-04', end: '2026-06-07' },
                 ]
               },
               {
                 name: 'Preparación de defensa',
                 type: 'package',
                 children: [
-                  { id: 'T55', name: 'Revisión con asesor', start: '2026-07-04', end: '2026-07-06' },
-                  { id: 'T56', name: 'Ajustes finales', start: '2026-07-06', end: '2026-07-08' },
-                  { id: 'T57', name: 'Guion de exposición', start: '2026-07-08', end: '2026-07-10' },
-                  { id: 'T58', name: 'PPT de defensa', start: '2026-07-10', end: '2026-07-13' },
-                  { id: 'T59', name: 'Ensayo final', start: '2026-07-13', end: '2026-07-15' },
-                  { id: 'T60', name: 'Entrega final', start: '2026-07-15', end: '2026-07-16' },
+                  { id: 'T55', name: 'Revisión con asesor', start: '2026-06-07', end: '2026-06-09' },
+                  { id: 'T56', name: 'Ajustes finales', start: '2026-06-09', end: '2026-06-11' },
+                  { id: 'T57', name: 'Guion de exposición', start: '2026-06-11', end: '2026-06-13' },
+                  { id: 'T58', name: 'PPT de defensa', start: '2026-06-13', end: '2026-06-16' },
+                  { id: 'T59', name: 'Ensayo final', start: '2026-06-16', end: '2026-06-18' },
+                  { id: 'T60', name: 'Entrega final', start: '2026-06-18', end: '2026-06-19' },
                 ]
               },
             ]
